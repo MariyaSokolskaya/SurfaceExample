@@ -59,7 +59,8 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
         super.draw(canvas);
         canvas.drawBitmap(image, iX, iY, paint);
         canvas.drawLine(iX, iY, tX, tY, paint);
-        delta();
+        if(tx != 0)
+            delta();
         iX += dx;
         iY += dy;
     }
